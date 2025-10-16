@@ -59,7 +59,13 @@ django/
 
     THIS WILL BE MY ENTITY RELATIONSHIP DIAGRAM
 
-<img src="./Blank-diagram.jpeg" />
+https://excalidraw.com/#json=t9sZSUXkvVgaelB4Uwe_p,WqLmnxAu6GtsXp_qUE6IfA
+https://lucid.app/lucidchart/5e93813c-462b-4d8f-86c3-05a322ad4148/edit?viewport_loc=-348%2C-858%2C4732%2C2404%2C0_0&invitationId=inv_73b05dd3-d0b3-49fd-b37f-1f69b3612127
+
+
+
+
+
 my ERD shows how many parts of my project data base are related.
 four tables include user, dealership,cars and reviews.
 Basically a dealership can have many cars and a car can have many reviews.
