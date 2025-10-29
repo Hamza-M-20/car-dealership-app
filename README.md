@@ -1,4 +1,5 @@
-# Car Dealership App
+PROJECT TITLE Car Dealership App
+A full stack web application built with Django and react stack and custom authentication where users can easily register, login, signout, view all cars at the landing page, with links to each car to take you on the details page, where only the signed in user has some aspects to the application like create, edit,update, delete and see all the reviews. also see all the dealerships.
 
 This is my plan for project 4 for the car dealership app.
 
@@ -64,3 +65,42 @@ Four tables include user, dealership, cars and reviews.
 Basically a dealership can have many cars and a car can have many reviews.
 Each review comes from one user and every car belongs to specific dealership and owner.
 
+📋 Prerequisites
+Python 3.11+
+Pipenv
+PostgreSQL
+Node.js
+
+⚙️ Installation & Setup
+Clone the Repository
+git clone 
+cd Django
+
+API ENDPOINTS
+
+AUTHENTICATION
+
+Method	Endpoint	           Description	                   Auth Required
+POST	/api/auth/register/	  Register a new user	                  No
+POST	/api/auth/login/	  Login and receive JWT token	          No
+
+Cars ENDPOINTS
+Method	     Endpoint	           Description	                Auth Required
+Get          /api/cars/            List all cars                      No
+Post         /api/cars/            create new car                     YES
+Get          /api/cars/{id}        Get Specific car details           No
+Put          /api/cars/{id}        update car                         YES
+Delete       /api/cars/{id}        Delete car                         YES
+
+Reviews Endpoints 
+Method	  Endpoint	               Description	               Auth Required
+Get       /api/cars/{id}/reviews   get a specific car reviews        NO
+Post      /api/cars/{id}/reviews   create a review                   YES
+
+🔐 Authentication
+This API uses JWT (JSON Web Tokens) for authentication.
+
+Using the Token
+Include the token in the Authorization header for protected routes:
+
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGc...
