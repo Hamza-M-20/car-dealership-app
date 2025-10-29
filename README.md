@@ -1,5 +1,7 @@
-PROJECT TITLE 
-Car Dealership App
+#PROJECT TITLE 
+
+##Car Dealership App
+
 A full stack web application built with Django and react stack and custom authentication where users can easily register, login, signout, view all cars at the landing page, with links to each car to take you on the details page, where only the signed in user has some aspects to the application like create, edit,update, delete and see all the reviews. also see all the dealerships.
 
 This is my plan for project 4 for the car dealership app.
@@ -66,25 +68,29 @@ Four tables include user, dealership, cars and reviews.
 Basically a dealership can have many cars and a car can have many reviews.
 Each review comes from one user and every car belongs to specific dealership and owner.
 
-FEATURES
+##FEATURES
 
-Authentication
+##Authentication
+
 Register and login endpoints 
 Custom model with Django's AbstractUser
 stay logged in using JWT 
 Srcure Password using Django's inbuilt hashers
 
-Cars-Dealership
+##Cars-Dealership
+
 Full Crud operations 
 Ownership based permissions. only users have access to edit/delete/create functionality
 Foreign key relationship between owners , dealership and cars
 Fields: Name, Make, Model, Year, Price, Mileage, Dealership, color
 
-Reviews
+##Reviews
+
 Users can add reviews
 View Reviews per car
 
-Security 
+##Security 
+
 JWT token-based authentication
 Password validation and hashing
 Owner-based resource protection
@@ -92,14 +98,17 @@ IsAuthenticatedOrReadOnly permissions
 CORS headers for cross-origin requests
 Explicit serializer fields (no __all__ for security)
 
-Serializer Structure
+##Serializer Structure
+
 common.py - basic serializer
 populated.py - serializers with nested data
 write only fields for sensitive data
 
 
-🛠️ Technology Stack
-Backend
+## Technology Stack
+
+###Backend
+
 Django
 Django Rest Framework
 Pyjwt
@@ -110,56 +119,68 @@ Python 3.11+
 PostgreSql
 
 
-Frontend
+###Frontend
+
 React-router
 Vite 6 
 Tailwind
 Axios
 The frontend application runs at: [http://localhost:5173](http://localhost:5173)
 
-Development Tools
+###Development Tools
+
 Pipenv
 Npm
 EsLint
 Autopep8
 
-DataBase
+###DataBase
+
 Postgresql
 Django object relational mapping
 
-📋 Prerequisites
+### Prerequisites
+
 Python 3.11+
 Pipenv
 PostgreSQL
 Node.js
 
-⚙️ Installation & Setup
-Clone the Repository
+## Installation & Setup
+
+###Clone the Repository
 [view on Github](https://github.com/Hamza-M-20/car-dealership-app)
 cd backend
 
-Install Dependencies
+###Install Dependencies
+
 pipenv install
 
-Activate Virtual Environment
+###Activate Virtual Environment
+
 pipenv shell
 
-4. Set Up PostgreSQL Database
+### Set Up PostgreSQL Database
+
 # Create a PostgreSQL database named 'car-dealership-api'
 createdb car-dealership-api
 
- Run Migrations
+ ###Run Migrations
+
 python3 manage.py migrate
 
-Create a Superuser 
+###Create a Superuser 
+
 python3 manage.py createsuperuser
 
-Start the Development Server
+###Start the Development Server
+
 python3 manage.py runserver
 
 [The API will be Available at](http://localhost:8000)
 
-Frontend 
+##Frontend 
+
 cd frontend
 Run npm install
 Run npm run dev
@@ -203,7 +224,7 @@ API ENDPOINTS
 | POST | `/api/reviews/` | Create new review | Yes |
 | GET | `/api/reviews/?car={car_id}` | Get reviews for specific car | No |
 
-🔐 Authentication
+### Authentication
 This API uses JWT (JSON Web Tokens) for authentication.
 
 Using the Token
@@ -211,9 +232,10 @@ Include the token in the Authorization header for protected routes:
 
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGc...
 
-DATABASE Models
+##DATABASE Models
 
-User (Custom - extends AbstractUser)
+### User (Custom – extends AbstractUser)
+
 ├── Inherited Fields (from AbstractUser)
 │   ├── id (Primary Key)
 │   ├── username (unique)
@@ -238,7 +260,8 @@ User (Custom - extends AbstractUser)
 └── Methods
     └── __str__() → "{username}"
 
-Dealership
+###Dealership
+
 ├── Fields
 │   ├── id (Primary Key )
 │   ├── name (CharField, max_length=255)
@@ -260,7 +283,8 @@ Dealership
     └── __str__()
         └── Returns: "{name} - {location}"
 
-Car
+###Car
+
 ├── Fields
 │   ├── id (Primary Key )
 │   ├── name (CharField, max_length=255)
@@ -281,7 +305,8 @@ Car
 └── Methods
     └── __str__() → "{year} {make} {model}"
 
-Review
+###Review
+
 ├── Fields
 │   ├── id (Primary Key )
 │   ├── text (TextField)
@@ -298,8 +323,15 @@ Review
 └── Methods
     └── __str__() → "Review by {owner.username}"
 
-📄 Additional Resources
 
-[Django Documentation](https://docs.djangoproject.com/)
-[DRF Documentation](https://www.django-rest-framework.org/)
+
+## Additional Resources
+
+- [Django Docs](https://docs.djangoproject.com/)
+
+- [DRF Docs](https://www.django-rest-framework.org/)
+
+- [React Docs](https://react.dev/)
+
+- [Tailwind Docs](https://tailwindcss.com/docs)
 
