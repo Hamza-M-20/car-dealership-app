@@ -270,9 +270,11 @@ Include the token in the Authorization header for protected routes:
 
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGc...
 
-##DATABASE Models
+## Database Models
 
- "### User (Custom – extends AbstractUser)"
+### User (Custom – extends AbstractUser)
+
+```
 
 ├── Inherited Fields (from AbstractUser)
 │   ├── id (Primary Key)
@@ -297,9 +299,12 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGc...
 │
 └── Methods
     └── __str__() → "{username}"
+```
 
 
- "###Dealership"
+### Dealership
+
+```
 
 ├── Fields
 │   ├── id (Primary Key )
@@ -321,9 +326,12 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGc...
 └── Methods
     └── __str__()
         └── Returns: "{name} - {location}"
+```
 
 
- "###Car"
+### Car
+
+```
 
 ├── Fields
 │   ├── id (Primary Key )
@@ -344,9 +352,12 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGc...
 │
 └── Methods
     └── __str__() → "{year} {make} {model}"
+```
 
 
- "###Review"
+### Review
+
+```
 
 ├── Fields
 │   ├── id (Primary Key )
@@ -363,6 +374,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGc...
 │
 └── Methods
     └── __str__() → "Review by {owner.username}"
+```
 
 
 
