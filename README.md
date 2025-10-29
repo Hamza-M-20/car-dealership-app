@@ -73,35 +73,49 @@ Each review comes from one user and every car belongs to specific dealership and
 ##Authentication
 
 Register and login endpoints 
+
 Custom model with Django's AbstractUser
+
 stay logged in using JWT 
+
 Srcure Password using Django's inbuilt hashers
 
 ##Cars-Dealership
 
 Full Crud operations 
+
 Ownership based permissions. only users have access to edit/delete/create functionality
+
 Foreign key relationship between owners , dealership and cars
+
 Fields: Name, Make, Model, Year, Price, Mileage, Dealership, color
 
 ##Reviews
 
 Users can add reviews
+
 View Reviews per car
 
 ##Security 
 
 JWT token-based authentication
+
 Password validation and hashing
+
 Owner-based resource protection
+
 IsAuthenticatedOrReadOnly permissions
+
 CORS headers for cross-origin requests
+
 Explicit serializer fields (no __all__ for security)
 
 ##Serializer Structure
 
 common.py - basic serializer
+
 populated.py - serializers with nested data
+
 write only fields for sensitive data
 
 
@@ -110,46 +124,66 @@ write only fields for sensitive data
 ###Backend
 
 Django
+
 Django Rest Framework
+
 Pyjwt
+
 Django Cors Headers
+
 Psycopg2
+
 Pipenv
+
 Python 3.11+
+
 PostgreSql
 
 
 ###Frontend
 
 React-router
+
 Vite 6 
+
 Tailwind
+
 Axios
+
 The frontend application runs at: [http://localhost:5173](http://localhost:5173)
 
 ###Development Tools
 
 Pipenv
+
 Npm
+
 EsLint
+
 Autopep8
 
 ###DataBase
 
 Postgresql
+
 Django object relational mapping
 
 ### Prerequisites
 
 Python 3.11+
+
 Pipenv
+
 PostgreSQL
+
 Node.js
 
 ## Installation & Setup
 
 ###Clone the Repository
+
 [view on Github](https://github.com/Hamza-M-20/car-dealership-app)
+
 cd backend
 
 ###Install Dependencies
@@ -163,6 +197,7 @@ pipenv shell
 ### Set Up PostgreSQL Database
 
 # Create a PostgreSQL database named 'car-dealership-api'
+
 createdb car-dealership-api
 
  ###Run Migrations
@@ -182,8 +217,11 @@ python3 manage.py runserver
 ##Frontend 
 
 cd frontend
+
 Run npm install
+
 Run npm run dev
+
 The frontend application runs at: [http://localhost:5173](http://localhost:5173)
 
 
@@ -234,7 +272,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGc...
 
 ##DATABASE Models
 
-### User (Custom – extends AbstractUser)
+ "### User (Custom – extends AbstractUser)"
 
 ├── Inherited Fields (from AbstractUser)
 │   ├── id (Primary Key)
@@ -260,7 +298,8 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGc...
 └── Methods
     └── __str__() → "{username}"
 
-###Dealership
+
+ "###Dealership"
 
 ├── Fields
 │   ├── id (Primary Key )
@@ -283,7 +322,8 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGc...
     └── __str__()
         └── Returns: "{name} - {location}"
 
-###Car
+
+ "###Car"
 
 ├── Fields
 │   ├── id (Primary Key )
@@ -305,7 +345,8 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGc...
 └── Methods
     └── __str__() → "{year} {make} {model}"
 
-###Review
+
+ "###Review"
 
 ├── Fields
 │   ├── id (Primary Key )
