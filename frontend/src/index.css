@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: whitesmoke;
+  background-color: whitesmoke;
+}
+
+html {
+  background-color: whitesmoke;
+}
+
+#root {
+  background-color: whitesmoke;
+  min-height: 100vh;
+}
+
+
+main {
+  padding-top: 80px;
+}
