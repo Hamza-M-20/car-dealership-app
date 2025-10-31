@@ -7,6 +7,9 @@ import { useNavigate } from 'react-router';
 import benz from "../../assets/benz.jpg";
 import civic from "../../assets/civic.webp";
 import honda2023 from "../../assets/2023_honda.avif";
+import gWagon from "../../assets/G-wagon.jpeg";
+import rangeRover from "../../assets/range rover.jpeg";
+import audi from "../../assets/audi.jpg";
 
 
 
@@ -146,10 +149,21 @@ const CarDetail = () => {
         <main className='max-w-4xl mx-auto p-6'>
             <h1 className='text-3xl font-bold mb-6' style={{ fontWeight: 'bold', fontSize: '24px', marginBottom: '24px', color: '#374151' }}>Car Detail</h1>
             <div className='mb-3 '> 
-            {car.make === "Honda" ? <img src={honda2023} alt="honda2023"  style={{ width: '800px', height: '600px' }} /> : 
-             car.make === "Mercedes Benz" ? <img src={benz} alt="benz" style={{ width: '800px', height: '600px' }} /> : 
-             car.make === "civic" ? <img src={civic} alt="civic" style={{ width: '800px', height: '600px' }} /> : 
-             null}
+            {(car.model?.toLowerCase().includes("g-wagon") || car.model?.toLowerCase().includes("g wagon") || car.model?.toLowerCase().includes("g-class") || car.model?.toLowerCase().includes("g class") || car.model?.toLowerCase().includes("g63") || car.make === "G-Wagon" || car.make === "G Wagon") ? (
+                <img src={gWagon} alt="G-Wagon" style={{ width: '800px', height: '600px' }} />
+            ) : (car.make === "Range Rover" || car.make === "Range_Rover") ? (
+                <img src={rangeRover} alt="Range Rover" style={{ width: '800px', height: '600px' }} />
+            ) : car.make === "Honda" ? (
+                <img src={honda2023} alt="Honda" style={{ width: '800px', height: '600px' }} />
+            ) : car.make === "Mercedes Benz" ? (
+                <img src={benz} alt="Mercedes Benz" style={{ width: '800px', height: '600px' }} />
+            ) : (car.make === "Civic" || car.make === "civic") ? (
+                <img src={civic} alt="Civic" style={{ width: '800px', height: '600px' }} />
+            ) : (car.make === "Audi" || car.make === "audi") ? (
+                <img src={audi} alt="Audi" style={{ width: '800px', height: '600px' }} />
+            ) : (
+                <img src={car.image} alt={car.name} style={{ width: '800px', height: '600px' }} />
+            )}
              </div>
             <p>Name: {car.name}</p>
             <p className='text-lg font-bold mb-2'>Make: {car.make}</p>
